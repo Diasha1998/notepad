@@ -112,8 +112,6 @@ const Home = () => {
           borderColor="red"
           animationDuration={2}
           pauseBetweenAnimations={1} /> */}
-
-
         <div style={{ position: 'relative', height: '300px' }}>
           <TextPressure
             text="NOTES!"
