@@ -1,5 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import TrueFocus from './animations/truefocus';
+import TextPressure from './animations/textpressure';
 
 const Home = () => {
   const [notes, setNotes] = useState(() => {
@@ -100,11 +102,35 @@ const Home = () => {
   };
 
   return (
+
     <div className="min-h-screen bg-gray-950 flex items-center justify-center p-4 font-sans antialiased">
       <div className="bg-gray-900 rounded-xl shadow-2xl p-8 max-w-2xl w-full relative"> 
-        <h1 className="text-4xl font-extrabold text-white mb-8 text-center">
+        {/* <TrueFocus
+          sentence="Note App"
+          manualMode={!1}
+          blurAmount={5}
+          borderColor="red"
+          animationDuration={2}
+          pauseBetweenAnimations={1} /> */}
+
+
+        <div style={{ position: 'relative', height: '300px' }}>
+          <TextPressure
+            text="NOTES!"
+            flex={true}
+            alpha={false}
+            stroke={false}
+            width={true}
+            weight={true}
+            italic={true}
+            textColor="#ffffff"
+            strokeColor="#ff0000"
+            minFontSize={36}
+          />
+        </div>
+        {/* <h1 className="text-4xl font-extrabold text-white mb-8 text-center">
           📝 My Notes
-        </h1>
+        </h1> */}
 
         {message && (
           <div className="bg-gray-700 border border-gray-600 text-gray-300 px-4 py-3 rounded-lg relative mb-6 text-center">
