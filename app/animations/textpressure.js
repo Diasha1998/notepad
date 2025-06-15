@@ -54,7 +54,6 @@ const TextPressure = ({
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('touchmove', handleTouchMove, { passive: false });
 
-    // Initialize mouse near center of container if it exists
     if (containerRef.current) {
       const { left, top, width, height } = containerRef.current.getBoundingClientRect();
       mouseRef.current.x = left + width / 2;
